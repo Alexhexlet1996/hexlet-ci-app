@@ -1,11 +1,9 @@
 name: newWorkflows
 on: push
 jobs:
-  build: 
+  build:
     runs-on: ubuntu-latest
-    steps: 
-    - uses: actions/checkout@v7
-    - uses: actions/setup-node@v7
+    steps:
     - run: make setup
     - run: make lint
     - run: make test
